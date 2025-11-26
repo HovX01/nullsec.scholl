@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title desc">
+  <title id="title">NullSec School</title>
+  <desc id="desc">Geometric shield with the letter N in a cyan to emerald gradient, symbolizing cybersecurity</desc>
+  <defs>
+    <linearGradient id="grad" x1="20" x2="140" y1="30" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#14b8a6"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="40" x2="120" y1="20" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g fill="none">
+    <path d="M80 12c-6.5 0-12.8 1.5-18.5 4.4L38 28.7C30.8 32.4 26 39.9 26 48.2v49.9c0 6.9 2.9 13.4 8 18l27.9 25.1c10 9 25.2 9 35.3 0L125 116c5.1-4.6 8-11.1 8-18V48.2c0-8.3-4.8-15.8-12-19.5l-23.5-12.3A35.7 35.7 0 0 0 80 12Z" fill="#0b1223" stroke="#1f2937" stroke-width="4"/>
+    <path d="M54 117.5V42.3c0-2.5 2.8-3.9 4.9-2.5l42.2 27.9c1 .7 1.6 1.8 1.6 3v35.1c0 2.5-2.8 3.9-4.9 2.5L55.7 71.4c-1-.7-1.6-1.8-1.6-3V42.5" stroke="url(#grad)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M46 58c0-11 5.9-21.2 15.4-26.5l7-3.8c7.8-4.2 17.4-4.2 25.2 0l12.9 7c9.4 5.1 15.4 15.3 15.4 26.5" stroke="url(#shine)" stroke-width="8" stroke-linecap="round"/>
+  </g>
+</svg>

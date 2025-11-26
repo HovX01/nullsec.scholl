@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NullSec School — Cybersecurity from Poland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              base: '#06b6d4',
+              dim: '#0ea5e9',
+              dark: '#0f172a',
+            },
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .glow-ring {
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 15px 60px rgba(6, 182, 212, 0.2);
+    }
+    .bg-grid {
+      background-image: linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+    .glass {
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+  </style>
+</head>
+<body class="font-display bg-slate-950 text-slate-50 relative overflow-x-hidden">
+  <div class="pointer-events-none absolute inset-0">
+    <div class="absolute -left-24 -top-32 h-80 w-80 bg-cyan-400/20 blur-[120px] rounded-full"></div>
+    <div class="absolute right-[-80px] top-24 h-96 w-96 bg-emerald-400/10 blur-[120px] rounded-full"></div>
+    <div class="absolute left-10 bottom-10 h-56 w-56 bg-sky-500/10 blur-[90px] rounded-full"></div>
+  </div>
+
+  <div class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+    <header class="sticky top-0 z-30 bg-slate-950/70 glass border-b border-white/5">
+      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center gap-6">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="NullSec School logo" class="h-11 w-11 glow-ring rounded-2xl bg-slate-950/60 border border-white/5">
+          <div>
+            <p class="text-lg font-semibold tracking-tight">NullSec School</p>
+            <p class="text-sm text-slate-400" data-i18n="heroBadge">Poland-based, EU-ready</p>
+          </div>
+        </div>
+        <nav class="ml-auto hidden md:flex items-center gap-6 text-sm text-slate-200">
+          <a href="#programs" class="hover:text-white transition" data-i18n="navPrograms">Programs</a>
+          <a href="#method" class="hover:text-white transition" data-i18n="navMethod">Method</a>
+          <a href="#contact" class="hover:text-white transition" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <div class="border border-white/10 rounded-full p-1 flex gap-1 bg-white/5">
+            <button data-lang-btn="en" class="px-3 py-1 rounded-full text-xs font-semibold text-slate-100 bg-white/10">EN</button>
+            <button data-lang-btn="pl" class="px-3 py-1 rounded-full text-xs font-semibold text-slate-300 hover:text-white">PL</button>
+          </div>
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400 text-slate-950 font-semibold text-sm hover:translate-y-[-1px] transition shadow-lg" data-i18n="navCta">Apply</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-12 md:py-16 lg:py-20 space-y-16 lg:space-y-24">
+      <section class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center" id="hero">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200 shadow-inner">
+            <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span data-i18n="heroBadge">Poland-based, EU-ready</span>
+          </div>
+          <div class="space-y-4">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight" data-i18n="heroTitle">Modern cybersecurity careers, built in Poland</h1>
+            <p class="text-lg text-slate-300 leading-relaxed" data-i18n="heroSubtitle">
+              NullSec is a security school focused on real-world breaches, blue-red collaboration, and the mindset it takes to defend modern companies.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-cyan-400 text-slate-950 font-semibold hover:translate-y-[-1px] transition shadow-lg shadow-cyan-400/20" data-i18n="heroCtaPrimary">Apply for the next cohort</a>
+            <a href="#programs" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/10 text-slate-100 hover:border-white/30 transition" data-i18n="heroCtaSecondary">Download syllabus</a>
+          </div>
+          <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-200">
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-cyan-400"></span>
+              <span data-i18n="heroList1">Offensive and defensive labs led by industry mentors</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-emerald-400"></span>
+              <span data-i18n="heroList2">Live + online formats, built for working professionals</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2 w-2 rounded-full bg-sky-400"></span>
+              <span data-i18n="heroList3">Career services with local and EU partners</span>
+            </li>
+          </ul>
+        </div>
+        <div class="relative">
+          <div class="absolute -right-10 -top-10 h-24 w-24 rounded-full bg-gradient-to-br from-cyan-400/30 to-emerald-300/30 blur-3xl"></div>
+          <div class="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-8 glass shadow-2xl shadow-cyan-500/10">
+            <div class="flex items-center justify-between mb-6">
+              <p class="text-sm text-slate-300" data-i18n="cohortTitle">Next cohort</p>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-400/20 text-emerald-200 border border-emerald-300/30" data-i18n="cohortBadge">Enrollment open</span>
+            </div>
+            <p class="text-2xl font-semibold leading-tight text-white mb-4" data-i18n="cohortDate">Starts 12 May — Warsaw & Remote</p>
+            <p class="text-sm text-slate-400 mb-6" data-i18n="cohortSeats">Limited seats: 32 participants</p>
+            <div class="grid grid-cols-3 gap-4">
+              <div class="rounded-2xl bg-slate-900/60 border border-white/5 p-4 text-center">
+                <p class="text-3xl font-bold text-white">90%</p>
+                <p class="text-xs text-slate-400" data-i18n="stat1Label">Placement in 6 months</p>
+              </div>
+              <div class="rounded-2xl bg-slate-900/60 border border-white/5 p-4 text-center">
+                <p class="text-3xl font-bold text-white">40+</p>
+                <p class="text-xs text-slate-400" data-i18n="stat2Label">Hiring partners</p>
+              </div>
+              <div class="rounded-2xl bg-slate-900/60 border border-white/5 p-4 text-center">
+                <p class="text-3xl font-bold text-white">320h</p>
+                <p class="text-xs text-slate-400" data-i18n="stat3Label">Labs & projects</p>
+              </div>
+            </div>
+            <div class="mt-6 p-[1px] bg-gradient-to-r from-cyan-400/60 via-slate-50/40 to-emerald-300/60 rounded-2xl">
+              <div class="bg-slate-950/70 rounded-2xl p-4 flex items-center gap-3">
+                <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-emerald-400 flex items-center justify-center text-slate-950 font-semibold">
+                  24/7
+                </div>
+                <div>
+                  <p class="text-sm font-semibold text-white" data-i18n="labsTitle">Hands-on Cyber Range</p>
+                  <p class="text-xs text-slate-300" data-i18n="labsCopy">Always-on lab access to practice detections and exploits safely.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="programs" class="space-y-6">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-cyan-300" data-i18n="programsEyebrow">Tracks</p>
+            <h2 class="text-3xl md:text-4xl font-semibold" data-i18n="programsHeading">Choose your track</h2>
+            <p class="text-slate-300 mt-2 max-w-2xl" data-i18n="programsCopy">Three intensive paths that mirror real security teams, each with blue-red collaboration built in.</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 text-sm text-slate-100 hover:border-white/40 transition" data-i18n="programsCta">Talk to an advisor</a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="p-6 rounded-3xl border border-white/10 bg-white/5 glass shadow-xl shadow-cyan-400/10">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold" data-i18n="program1Title">Blue Team Analyst</h3>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-400/20 text-emerald-200 border border-emerald-300/30" data-i18n="programDuration1">12 weeks</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="program1Desc">Detection engineering, threat hunting, SIEM pipelines, and incident response under real pressure.</p>
+            <ul class="space-y-2 text-sm text-slate-200">
+              <li class="flex items-start gap-2">
+                <span class="h-2 w-2 mt-1 rounded-full bg-cyan-400"></span>
+                <span data-i18n="program1Bullet1">Build detections for live red team exercises</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="h-2 w-2 mt-1 rounded-full bg-emerald-400"></span>
+                <span data-i18n="program1Bullet2">Design runbooks and on-call simulations</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="h-2 w-2 mt-1 rounded-full bg-sky-400"></span>
+                <span data-i18n="program1Bullet3">Cloud and endpoint telemetry deep dives</span>
+              </li>
+            </ul>
+          </article>
+          <article class="p-6 rounded-3xl border border-white/10 bg-white/5 glass shadow-xl shadow-emerald-400/10">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold" data-i18n="program2Title">Red Team Operator</h3>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-400/20 text-cyan-100 border border-cyan-300/30" data-i18n="programDuration2">12 weeks</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="program2Desc">Adversary emulation, infrastructure, exploit chains, and stealth operations to sharpen blue teams.</p>
+            <ul class="space-y-2 text-sm text-slate-200">
+              <li class="flex items-start gap-2">
+                <span class="h-2 w-2 mt-1 rounded-full bg-cyan-400"></span>
+                <span data-i18n="program2Bullet1">Build C2 infra with OPSEC in mind</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="h-2 w-2 mt-1 rounded-full bg-emerald-400"></span>
+                <span data-i18n="program2Bullet2">Privilege escalation and lateral movement labs</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="h-2 w-2 mt-1 rounded-full bg-sky-400"></span>
+                <span data-i18n="program2Bullet3">Purple team exercises with detection feedback</span>
+              </li>
+            </ul>
+          </article>
+          <article class="p-6 rounded-3xl border border-white/10 bg-white/5 glass shadow-xl shadow-sky-400/10">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-semibold" data-i18n="program3Title">AppSec Engineer</h3>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-400/20 text-sky-100 border border-sky-300/30" data-i18n="programDuration3">10 weeks</span>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="program3Desc">Secure SDLC, code review, cloud-native threats, and shipping security controls without slowing teams.</p>
+            <ul class="space-y-2 text-sm text-slate-200">
+              <li class="flex items-start gap-2">
+                <span class="h-2 w-2 mt-1 rounded-full bg-cyan-400"></span>
+                <span data-i18n="program3Bullet1">Threat modeling for real product backlogs</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="h-2 w-2 mt-1 rounded-full bg-emerald-400"></span>
+                <span data-i18n="program3Bullet2">Hands-on code review and IaC hardening</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="h-2 w-2 mt-1 rounded-full bg-sky-400"></span>
+                <span data-i18n="program3Bullet3">Build guardrails CI/CD teams keep</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="method" class="space-y-6">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-cyan-300" data-i18n="methodEyebrow">Method</p>
+            <h2 class="text-3xl md:text-4xl font-semibold" data-i18n="methodHeading">How we train</h2>
+            <p class="text-slate-300 mt-2 max-w-3xl" data-i18n="methodCopy">NullSec blends live instruction, always-on ranges, and mentorship from operators who actively defend and attack real companies.</p>
+          </div>
+          <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-sm text-slate-100 hover:bg-white/20 transition" data-i18n="methodCta">Book a live walkthrough</a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-4">
+          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6 space-y-3">
+            <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-emerald-400 flex items-center justify-center text-slate-950 font-semibold">01</div>
+            <h3 class="text-xl font-semibold" data-i18n="method1Title">Scenario-driven labs</h3>
+            <p class="text-slate-300 text-sm" data-i18n="method1Desc">Every sprint ends with a live incident: intrusion traces, response deadlines, and blue-red debriefs.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6 space-y-3">
+            <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-400 flex items-center justify-center text-slate-950 font-semibold">02</div>
+            <h3 class="text-xl font-semibold" data-i18n="method2Title">Mentor pods</h3>
+            <p class="text-slate-300 text-sm" data-i18n="method2Desc">Weekly 1:6 mentor pods keep you unblocked, review artifacts, and align you to hiring expectations.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6 space-y-3">
+            <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-sky-400 to-cyan-400 flex items-center justify-center text-slate-950 font-semibold">03</div>
+            <h3 class="text-xl font-semibold" data-i18n="method3Title">Career outcomes</h3>
+            <p class="text-slate-300 text-sm" data-i18n="method3Desc">Interview prep, portfolio-ready case studies, and direct intros to partners across Poland and the EU.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
+        <div class="p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent glass space-y-6">
+          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300" data-i18n="communityEyebrow">Community</p>
+          <h2 class="text-3xl font-semibold" data-i18n="communityHeading">Built for operators, not spectators</h2>
+          <p class="text-slate-300" data-i18n="communityCopy">Stay in the arena with security professionals across Poland: weekly threat intel huddles, guest sessions, and on-site meetups in Warsaw, Kraków, and Gdańsk.</p>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div class="rounded-2xl bg-slate-900/70 border border-white/10 p-4">
+              <p class="text-sm text-slate-300" data-i18n="communityCard1Title">Threat intel Fridays</p>
+              <p class="text-sm text-slate-400" data-i18n="communityCard1Desc">Walk through active campaigns, build detections, and ship fixes before Monday.</p>
+            </div>
+            <div class="rounded-2xl bg-slate-900/70 border border-white/10 p-4">
+              <p class="text-sm text-slate-300" data-i18n="communityCard2Title">Mentor office hours</p>
+              <p class="text-sm text-slate-400" data-i18n="communityCard2Desc">Direct support on labs, resumes, and interviews from practitioners.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="flex -space-x-2">
+              <img src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=120&h=120&q=80" alt="Community member" class="h-10 w-10 rounded-full object-cover border border-white/10 shadow-lg shadow-black/30" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=120&h=120&q=80" alt="Community member" class="h-10 w-10 rounded-full object-cover border border-white/10 shadow-lg shadow-black/30" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&h=120&q=80" alt="Community member" class="h-10 w-10 rounded-full object-cover border border-white/10 shadow-lg shadow-black/30" loading="lazy">
+            </div>
+            <p class="text-sm text-slate-300" data-i18n="communityNote">Join 500+ learners and alumni staying sharp together.</p>
+          </div>
+        </div>
+        <div class="p-[1px] rounded-3xl bg-gradient-to-br from-cyan-400/60 via-white/20 to-emerald-300/60">
+          <div class="rounded-3xl bg-slate-950/80 glass p-8 h-full flex flex-col justify-between">
+            <div>
+              <p class="text-sm text-cyan-200 font-semibold mb-4" data-i18n="testimonialTag">Alumni insight</p>
+              <p class="text-xl text-white leading-relaxed" data-i18n="testimonialQuote">NullSec mimics the urgency of real incidents. By week 5 I was already leading blue team debriefs and demoing detections to hiring partners.</p>
+            </div>
+            <div class="mt-6">
+              <p class="font-semibold text-white" data-i18n="testimonialName">Katarzyna Nowak</p>
+              <p class="text-sm text-slate-300" data-i18n="testimonialRole">Security Engineer, Warsaw</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-white/5 border border-white/10 rounded-3xl p-8 lg:p-10 glass">
+        <div class="flex flex-col lg:flex-row gap-8 items-start lg:items-center justify-between">
+          <div class="space-y-3 max-w-3xl">
+            <p class="text-sm uppercase tracking-[0.3em] text-cyan-300" data-i18n="ctaEyebrow">Admissions</p>
+            <h2 class="text-3xl font-semibold" data-i18n="ctaHeading">Ready to level up security with us?</h2>
+            <p class="text-slate-300" data-i18n="ctaCopy">Tell us about your goals. We will schedule a 20-minute call to match you to the right track and send the full syllabus in English or Polish.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="mailto:admissions@nullsec.edu.pl" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-cyan-400 text-slate-950 font-semibold hover:translate-y-[-1px] transition shadow-lg shadow-cyan-400/20" data-i18n="ctaButtonPrimary">Email admissions</a>
+              <a href="https://cal.com" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/15 text-slate-100 hover:border-white/40 transition" data-i18n="ctaButtonSecondary">Schedule a call</a>
+            </div>
+          </div>
+          <div class="w-full lg:w-80 rounded-2xl border border-white/10 bg-slate-900/70 p-4 space-y-4">
+            <div class="flex items-center gap-3">
+              <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=160&h=160&q=80" alt="Admissions advisor" class="h-12 w-12 rounded-xl object-cover border border-white/10 shadow-lg shadow-black/30" loading="lazy">
+              <div>
+                <p class="text-sm font-semibold text-white" data-i18n="contactTitle">Local focus</p>
+                <p class="text-xs text-slate-300" data-i18n="contactCopy">Warsaw HQ with hybrid cohorts and EU-ready curriculum.</p>
+              </div>
+            </div>
+            <div class="text-sm text-slate-300 space-y-1">
+              <p>support@nullsec.edu.pl</p>
+              <p data-i18n="contactAddress">ul. Cybernetyki 10, Warsaw</p>
+              <p data-i18n="contactPhone">+48 22 000 000</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 bg-slate-950/80">
+      <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-slate-400">
+        <div class="flex items-center gap-3">
+          <img src="logo.png" alt="NullSec School logo" class="h-9 w-9 rounded-2xl bg-slate-950/60 border border-white/5">
+          <p data-i18n="footerNote">NullSec School — cybersecurity education built in Poland.</p>
+        </div>
+        <div class="flex gap-4 text-slate-300">
+          <a href="mailto:support@nullsec.edu.pl" class="hover:text-white transition">support@nullsec.edu.pl</a>
+          <a href="#hero" class="hover:text-white transition" data-i18n="footerBack">Back to top</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const translations = {
+      en: {
+        metaTitle: 'NullSec School — Cybersecurity from Poland',
+        heroBadge: 'Poland-based, EU-ready',
+        navPrograms: 'Programs',
+        navMethod: 'Method',
+        navContact: 'Contact',
+        navCta: 'Apply',
+        heroTitle: 'Modern cybersecurity careers, built in Poland',
+        heroSubtitle: 'NullSec is a security school focused on real-world breaches, blue-red collaboration, and the mindset it takes to defend modern companies.',
+        heroCtaPrimary: 'Apply for the next cohort',
+        heroCtaSecondary: 'Download syllabus',
+        heroList1: 'Offensive and defensive labs led by industry mentors',
+        heroList2: 'Live + online formats, built for working professionals',
+        heroList3: 'Career services with local and EU partners',
+        cohortTitle: 'Next cohort',
+        cohortDate: 'Starts 12 May — Warsaw & Remote',
+        cohortSeats: 'Limited seats: 32 participants',
+        cohortBadge: 'Enrollment open',
+        stat1Label: 'Placement in 6 months',
+        stat2Label: 'Hiring partners',
+        stat3Label: 'Labs & projects',
+        labsTitle: 'Hands-on Cyber Range',
+        labsCopy: 'Always-on lab access to practice detections and exploits safely.',
+        programsEyebrow: 'Tracks',
+        programsHeading: 'Choose your track',
+        programsCopy: 'Three intensive paths that mirror real security teams, each with blue-red collaboration built in.',
+        programsCta: 'Talk to an advisor',
+        program1Title: 'Blue Team Analyst',
+        program1Desc: 'Detection engineering, threat hunting, SIEM pipelines, and incident response under real pressure.',
+        program1Bullet1: 'Build detections for live red team exercises',
+        program1Bullet2: 'Design runbooks and on-call simulations',
+        program1Bullet3: 'Cloud and endpoint telemetry deep dives',
+        programDuration1: '12 weeks',
+        program2Title: 'Red Team Operator',
+        program2Desc: 'Adversary emulation, infrastructure, exploit chains, and stealth operations to sharpen blue teams.',
+        program2Bullet1: 'Build C2 infra with OPSEC in mind',
+        program2Bullet2: 'Privilege escalation and lateral movement labs',
+        program2Bullet3: 'Purple team exercises with detection feedback',
+        programDuration2: '12 weeks',
+        program3Title: 'AppSec Engineer',
+        program3Desc: 'Secure SDLC, code review, cloud-native threats, and shipping security controls without slowing teams.',
+        program3Bullet1: 'Threat modeling for real product backlogs',
+        program3Bullet2: 'Hands-on code review and IaC hardening',
+        program3Bullet3: 'Build guardrails CI/CD teams keep',
+        programDuration3: '10 weeks',
+        methodEyebrow: 'Method',
+        methodHeading: 'How we train',
+        methodCopy: 'NullSec blends live instruction, always-on ranges, and mentorship from operators who actively defend and attack real companies.',
+        methodCta: 'Book a live walkthrough',
+        method1Title: 'Scenario-driven labs',
+        method1Desc: 'Every sprint ends with a live incident: intrusion traces, response deadlines, and blue-red debriefs.',
+        method2Title: 'Mentor pods',
+        method2Desc: 'Weekly 1:6 mentor pods keep you unblocked, review artifacts, and align you to hiring expectations.',
+        method3Title: 'Career outcomes',
+        method3Desc: 'Interview prep, portfolio-ready case studies, and direct intros to partners across Poland and the EU.',
+        communityEyebrow: 'Community',
+        communityHeading: 'Built for operators, not spectators',
+        communityCopy: 'Stay in the arena with security professionals across Poland: weekly threat intel huddles, guest sessions, and on-site meetups in Warsaw, Kraków, and Gdańsk.',
+        communityCard1Title: 'Threat intel Fridays',
+        communityCard1Desc: 'Walk through active campaigns, build detections, and ship fixes before Monday.',
+        communityCard2Title: 'Mentor office hours',
+        communityCard2Desc: 'Direct support on labs, resumes, and interviews from practitioners.',
+        communityNote: 'Join 500+ learners and alumni staying sharp together.',
+        testimonialTag: 'Alumni insight',
+        testimonialQuote: 'NullSec mimics the urgency of real incidents. By week 5 I was already leading blue team debriefs and demoing detections to hiring partners.',
+        testimonialName: 'Katarzyna Nowak',
+        testimonialRole: 'Security Engineer, Warsaw',
+        ctaEyebrow: 'Admissions',
+        ctaHeading: 'Ready to level up security with us?',
+        ctaCopy: 'Tell us about your goals. We will schedule a 20-minute call to match you to the right track and send the full syllabus in English or Polish.',
+        ctaButtonPrimary: 'Email admissions',
+        ctaButtonSecondary: 'Schedule a call',
+        contactTitle: 'Local focus',
+        contactCopy: 'Warsaw HQ with hybrid cohorts and EU-ready curriculum.',
+        contactAddress: 'ul. Cybernetyki 10, Warsaw',
+        contactPhone: '+48 22 000 000',
+        footerNote: 'NullSec School — cybersecurity education built in Poland.',
+        footerBack: 'Back to top',
+      },
+      pl: {
+        metaTitle: 'NullSec School — Cyberbezpieczeństwo z Polski',
+        heroBadge: 'Szkoła z Polski, gotowa na UE',
+        navPrograms: 'Programy',
+        navMethod: 'Metoda',
+        navContact: 'Kontakt',
+        navCta: 'Aplikuj',
+        heroTitle: 'Nowoczesne kariery cyberbezpieczeństwa tworzone w Polsce',
+        heroSubtitle: 'NullSec to szkoła bezpieczeństwa oparta na realnych incydentach, współpracy blue-red i nastawieniu potrzebnym do obrony firm.',
+        heroCtaPrimary: 'Aplikuj do najbliższej edycji',
+        heroCtaSecondary: 'Pobierz sylabus',
+        heroList1: 'Laboratoria ofensywne i defensywne prowadzone przez praktyków',
+        heroList2: 'Formuła na żywo i online, dopasowana do osób pracujących',
+        heroList3: 'Wsparcie kariery z lokalnymi i unijnymi partnerami',
+        cohortTitle: 'Najbliższa edycja',
+        cohortDate: 'Start 12 maja — Warszawa i online',
+        cohortSeats: 'Limit miejsc: 32 uczestników',
+        cohortBadge: 'Rekrutacja otwarta',
+        stat1Label: 'Zatrudnienie w 6 miesięcy',
+        stat2Label: 'Partnerzy rekrutacyjni',
+        stat3Label: 'Godzin labów i projektów',
+        labsTitle: 'Praktyczna Cyber Range',
+        labsCopy: 'Całodobowy dostęp do laboratoriów dla detekcji i exploitów w bezpiecznych warunkach.',
+        programsEyebrow: 'Ścieżki',
+        programsHeading: 'Wybierz ścieżkę',
+        programsCopy: 'Trzy intensywne kierunki odzwierciedlające prawdziwe zespoły bezpieczeństwa, z wbudowaną współpracą blue-red.',
+        programsCta: 'Porozmawiaj z doradcą',
+        program1Title: 'Analityk Blue Team',
+        program1Desc: 'Inżynieria detekcji, threat hunting, SIEM i reakcja na incydenty pod presją.',
+        program1Bullet1: 'Buduj detekcje na potrzeby ćwiczeń red team',
+        program1Bullet2: 'Projektuj runbooki i symulacje dyżurów',
+        program1Bullet3: 'Dogłębna analiza telemetryczna chmury i endpointów',
+        programDuration1: '12 tygodni',
+        program2Title: 'Operator Red Team',
+        program2Desc: 'Emulacja przeciwnika, infrastruktura, łańcuchy exploitów i operacje stealth dla wzmocnienia blue teamów.',
+        program2Bullet1: 'Buduj infrastrukturę C2 z dbałością o OPSEC',
+        program2Bullet2: 'Laboratoria eskalacji uprawnień i ruchu bocznego',
+        program2Bullet3: 'Ćwiczenia purple team z feedbackiem z detekcji',
+        programDuration2: '12 tygodni',
+        program3Title: 'Inżynier AppSec',
+        program3Desc: 'Bezpieczny SDLC, code review, zagrożenia cloud-native i wdrażanie zabezpieczeń bez blokowania zespołów.',
+        program3Bullet1: 'Modelowanie zagrożeń dla realnych backlogów',
+        program3Bullet2: 'Praktyczne code review i hardening IaC',
+        program3Bullet3: 'Budowa zabezpieczeń w CI/CD utrzymywanych przez zespoły',
+        programDuration3: '10 tygodni',
+        methodEyebrow: 'Metoda',
+        methodHeading: 'Jak szkolimy',
+        methodCopy: 'NullSec łączy zajęcia na żywo, całodobowe laboratoria i mentoring operatorów, którzy naprawdę bronią i atakują firmy.',
+        methodCta: 'Umów pokaz na żywo',
+        method1Title: 'Scenariusze z incydentami',
+        method1Desc: 'Każdy sprint kończy się incydentem: ślady włamania, deadliny reakcji i wspólne debriefingi.',
+        method2Title: 'Pody mentorski',
+        method2Desc: 'Cotygodniowe grupy 1:6, aby usuwać blokady, oceniać artefakty i dopasować do oczekiwań rekrutacji.',
+        method3Title: 'Wyniki kariery',
+        method3Desc: 'Przygotowanie do rozmów, studia przypadków do portfolio i bezpośrednie polecenia do partnerów w Polsce i UE.',
+        communityEyebrow: 'Społeczność',
+        communityHeading: 'Dla praktyków, nie widzów',
+        communityCopy: 'Pozostań w akcji z ekspertami bezpieczeństwa w Polsce: cotygodniowe spotkania threat intel, goście i meetupy w Warszawie, Krakowie i Gdańsku.',
+        communityCard1Title: 'Piątki threat intel',
+        communityCard1Desc: 'Analiza bieżących kampanii, tworzenie detekcji i wdrożenie poprawek przed poniedziałkiem.',
+        communityCard2Title: 'Dyżury mentorskie',
+        communityCard2Desc: 'Bezpośrednie wsparcie w labach, CV i rozmowach od praktyków.',
+        communityNote: 'Dołącz do 500+ uczniów i absolwentów utrzymujących formę.',
+        testimonialTag: 'Głos absolwentki',
+        testimonialQuote: 'NullSec odwzorowuje presję prawdziwych incydentów. Już w 5. tygodniu prowadziłam debriefingi blue team i prezentowałam detekcje partnerom.',
+        testimonialName: 'Katarzyna Nowak',
+        testimonialRole: 'Security Engineer, Warszawa',
+        ctaEyebrow: 'Rekrutacja',
+        ctaHeading: 'Gotów na kolejny krok w bezpieczeństwie?',
+        ctaCopy: 'Powiedz nam o swoich celach. Umówimy 20-minutową rozmowę, dobierzemy ścieżkę i wyślemy pełny sylabus po polsku lub angielsku.',
+        ctaButtonPrimary: 'Napisz do rekrutacji',
+        ctaButtonSecondary: 'Umów rozmowę',
+        contactTitle: 'Lokalne nastawienie',
+        contactCopy: 'Siedziba w Warszawie, hybrydowe edycje i program gotowy na UE.',
+        contactAddress: 'ul. Cybernetyki 10, Warszawa',
+        contactPhone: '+48 22 000 000',
+        footerNote: 'NullSec School — edukacja cyberbezpieczeństwa z Polski.',
+        footerBack: 'Powrót na górę',
+      },
+    };
+
+    const langButtons = document.querySelectorAll('[data-lang-btn]');
+
+    function setLanguage(lang) {
+      const current = translations[lang] ? lang : 'en';
+      document.documentElement.lang = current;
+      document.title = translations[current].metaTitle;
+      document.querySelectorAll('[data-i18n]').forEach((node) => {
+        const key = node.getAttribute('data-i18n');
+        const value = translations[current][key];
+        if (value) {
+          if (node.tagName.toLowerCase() === 'input' && node.placeholder) {
+            node.placeholder = value;
+          } else {
+            node.textContent = value;
+          }
+        }
+      });
+      langButtons.forEach((btn) => {
+        const active = btn.getAttribute('data-lang-btn') === current;
+        btn.classList.toggle('bg-white/10', active);
+        btn.classList.toggle('text-slate-100', active);
+        btn.classList.toggle('text-slate-300', !active);
+      });
+    }
+
+    langButtons.forEach((btn) => {
+      btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang-btn')));
+    });
+
+    setLanguage('en');
+  </script>
+</body>
+</html>
