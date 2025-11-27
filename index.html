@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" class="scroll-smooth overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,7 +47,7 @@
     <div class="absolute left-10 bottom-10 h-56 w-56 bg-sky-500/10 blur-[90px] rounded-full"></div>
   </div>
 
-  <div class="relative bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
+  <div class="relative overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
     <header class="sticky top-0 z-30 bg-slate-950/70 glass border-b border-white/5">
       <div class="max-w-6xl mx-auto px-6 py-4 flex items-center gap-6">
         <div class="flex items-center gap-3">
@@ -72,10 +72,10 @@
       </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-12 md:py-16 lg:py-20 space-y-16 lg:space-y-24">
-      <section class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center" id="hero">
+    <main class="max-w-6xl w-full mx-auto px-6 py-12 md:py-16 lg:py-20 space-y-16 lg:space-y-24">
+      <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center" id="hero">
         <div class="space-y-6">
-          <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm text-slate-200 shadow-inner">
+          <div class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-transparent px-3 py-1 text-sm text-slate-200">
             <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span data-i18n="heroBadge">Poland-based, EU-ready</span>
           </div>
@@ -89,7 +89,7 @@
             <a href="#contact" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-cyan-400 text-slate-950 font-semibold hover:translate-y-[-1px] transition shadow-lg shadow-cyan-400/20" data-i18n="heroCtaPrimary">Apply for the next cohort</a>
             <a href="#programs" class="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-white/10 text-slate-100 hover:border-white/30 transition" data-i18n="heroCtaSecondary">Download syllabus</a>
           </div>
-          <ul class="grid sm:grid-cols-2 gap-3 text-sm text-slate-200">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-200">
             <li class="flex items-start gap-3">
               <span class="mt-1 h-2 w-2 rounded-full bg-cyan-400"></span>
               <span data-i18n="heroList1">Offensive and defensive labs led by industry mentors</span>
@@ -109,11 +109,11 @@
           <div class="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-8 glass shadow-2xl shadow-cyan-500/10">
             <div class="flex items-center justify-between mb-6">
               <p class="text-sm text-slate-300" data-i18n="cohortTitle">Next cohort</p>
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-400/20 text-emerald-200 border border-emerald-300/30" data-i18n="cohortBadge">Enrollment open</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-transparent text-emerald-200 border border-emerald-300/60" data-i18n="cohortBadge">Enrollment open</span>
             </div>
             <p class="text-2xl font-semibold leading-tight text-white mb-4" data-i18n="cohortDate">Starts 12 May — Warsaw & Remote</p>
             <p class="text-sm text-slate-400 mb-6" data-i18n="cohortSeats">Limited seats: 32 participants</p>
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div class="rounded-2xl bg-slate-900/60 border border-white/5 p-4 text-center">
                 <p class="text-3xl font-bold text-white">90%</p>
                 <p class="text-xs text-slate-400" data-i18n="stat1Label">Placement in 6 months</p>
@@ -129,7 +129,7 @@
             </div>
             <div class="mt-6 p-[1px] bg-gradient-to-r from-cyan-400/60 via-slate-50/40 to-emerald-300/60 rounded-2xl">
               <div class="bg-slate-950/70 rounded-2xl p-4 flex items-center gap-3">
-                <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-emerald-400 flex items-center justify-center text-slate-950 font-semibold">
+                <div class="h-12 w-12 rounded-xl border border-cyan-300/60 flex items-center justify-center text-cyan-100 font-semibold">
                   24/7
                 </div>
                 <div>
@@ -151,11 +151,11 @@
           </div>
           <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 text-sm text-slate-100 hover:border-white/40 transition" data-i18n="programsCta">Talk to an advisor</a>
         </div>
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <article class="p-6 rounded-3xl border border-white/10 bg-white/5 glass shadow-xl shadow-cyan-400/10">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-semibold" data-i18n="program1Title">Blue Team Analyst</h3>
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-400/20 text-emerald-200 border border-emerald-300/30" data-i18n="programDuration1">12 weeks</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-transparent text-emerald-200 border border-emerald-300/60" data-i18n="programDuration1">12 weeks</span>
             </div>
             <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="program1Desc">Detection engineering, threat hunting, SIEM pipelines, and incident response under real pressure.</p>
             <ul class="space-y-2 text-sm text-slate-200">
@@ -176,7 +176,7 @@
           <article class="p-6 rounded-3xl border border-white/10 bg-white/5 glass shadow-xl shadow-emerald-400/10">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-semibold" data-i18n="program2Title">Red Team Operator</h3>
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-cyan-400/20 text-cyan-100 border border-cyan-300/30" data-i18n="programDuration2">12 weeks</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-transparent text-cyan-100 border border-cyan-300/60" data-i18n="programDuration2">12 weeks</span>
             </div>
             <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="program2Desc">Adversary emulation, infrastructure, exploit chains, and stealth operations to sharpen blue teams.</p>
             <ul class="space-y-2 text-sm text-slate-200">
@@ -197,7 +197,7 @@
           <article class="p-6 rounded-3xl border border-white/10 bg-white/5 glass shadow-xl shadow-sky-400/10">
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-xl font-semibold" data-i18n="program3Title">AppSec Engineer</h3>
-              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-400/20 text-sky-100 border border-sky-300/30" data-i18n="programDuration3">10 weeks</span>
+              <span class="px-3 py-1 rounded-full text-xs font-semibold bg-transparent text-sky-100 border border-sky-300/60" data-i18n="programDuration3">10 weeks</span>
             </div>
             <p class="text-slate-300 text-sm leading-relaxed mb-4" data-i18n="program3Desc">Secure SDLC, code review, cloud-native threats, and shipping security controls without slowing teams.</p>
             <ul class="space-y-2 text-sm text-slate-200">
@@ -227,31 +227,31 @@
           </div>
           <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 text-sm text-slate-100 hover:bg-white/20 transition" data-i18n="methodCta">Book a live walkthrough</a>
         </div>
-        <div class="grid md:grid-cols-3 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6 space-y-3">
-            <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-cyan-400 to-emerald-400 flex items-center justify-center text-slate-950 font-semibold">01</div>
+            <div class="h-12 w-12 rounded-xl border border-cyan-300/60 flex items-center justify-center text-cyan-100 font-semibold">01</div>
             <h3 class="text-xl font-semibold" data-i18n="method1Title">Scenario-driven labs</h3>
             <p class="text-slate-300 text-sm" data-i18n="method1Desc">Every sprint ends with a live incident: intrusion traces, response deadlines, and blue-red debriefs.</p>
           </div>
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6 space-y-3">
-            <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-emerald-400 to-cyan-400 flex items-center justify-center text-slate-950 font-semibold">02</div>
+            <div class="h-12 w-12 rounded-xl border border-emerald-300/60 flex items-center justify-center text-emerald-100 font-semibold">02</div>
             <h3 class="text-xl font-semibold" data-i18n="method2Title">Mentor pods</h3>
             <p class="text-slate-300 text-sm" data-i18n="method2Desc">Weekly 1:6 mentor pods keep you unblocked, review artifacts, and align you to hiring expectations.</p>
           </div>
           <div class="rounded-2xl border border-white/10 bg-slate-900/60 p-6 space-y-3">
-            <div class="h-12 w-12 rounded-xl bg-gradient-to-br from-sky-400 to-cyan-400 flex items-center justify-center text-slate-950 font-semibold">03</div>
+            <div class="h-12 w-12 rounded-xl border border-sky-300/60 flex items-center justify-center text-sky-100 font-semibold">03</div>
             <h3 class="text-xl font-semibold" data-i18n="method3Title">Career outcomes</h3>
             <p class="text-slate-300 text-sm" data-i18n="method3Desc">Interview prep, portfolio-ready case studies, and direct intros to partners across Poland and the EU.</p>
           </div>
         </div>
       </section>
 
-      <section class="grid lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
+      <section class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-8 items-center">
         <div class="p-8 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 via-white/5 to-transparent glass space-y-6">
           <p class="text-sm uppercase tracking-[0.3em] text-cyan-300" data-i18n="communityEyebrow">Community</p>
           <h2 class="text-3xl font-semibold" data-i18n="communityHeading">Built for operators, not spectators</h2>
           <p class="text-slate-300" data-i18n="communityCopy">Stay in the arena with security professionals across Poland: weekly threat intel huddles, guest sessions, and on-site meetups in Warsaw, Kraków, and Gdańsk.</p>
-          <div class="grid sm:grid-cols-2 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="rounded-2xl bg-slate-900/70 border border-white/10 p-4">
               <p class="text-sm text-slate-300" data-i18n="communityCard1Title">Threat intel Fridays</p>
               <p class="text-sm text-slate-400" data-i18n="communityCard1Desc">Walk through active campaigns, build detections, and ship fixes before Monday.</p>
